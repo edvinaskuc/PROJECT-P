@@ -1,0 +1,52 @@
+@use "responsive";
+@use "variables";
+
+.slider-section-bottom {
+  padding-top: 200px;
+
+  .slider-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-dflex {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive.md {
+      flex-direction: column;
+    }
+  }
+
+  .main-second-section-content-text-title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: variables.$color-title-orange;
+    font-weight: 400;
+  }
+
+  .main-second-section-content-text-title-bottom {
+    font-size: 41px;
+    text-transform: uppercase;
+    color: variables.$color-primary-green;
+    font-weight: 400;
+  }
+
+  .slider-buttons {
+    @include responsive.md {
+      display: none;
+    }
+
+    .sr-img {
+      display: block;
+      cursor: pointer;
+    }
+    .sl-img {
+      display: block;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+  }
+}

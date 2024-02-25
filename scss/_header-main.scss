@@ -1,0 +1,118 @@
+@use "responsive";
+@use "variables";
+
+.header-main {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+
+  @include responsive.xxxl {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include responsive.lg {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .logo-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: variables.$color-primary-green;
+
+      &:hover {
+        color: variables.$color-primary-green-hover;
+      }
+    }
+  }
+
+  .navigation-header {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+
+    @include responsive.md {
+      flex-direction: column;
+    }
+
+    ul {
+      display: flex;
+      gap: 48px;
+
+      @include responsive.lg {
+        padding: 0;
+      }
+
+      @include responsive.md {
+        flex-direction: column;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+        font-size: 12px;
+        font-weight: 500;
+        color: variables.$color-elements;
+      }
+
+      a {
+        font-size: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: variables.$color-elements;
+        display: inline-block;
+
+        &:hover {
+          color: variables.$color-primary-green;
+        }
+
+        &::first-letter {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .header-button {
+    display: inline-block;
+    font-size: 12px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background: rgb(102, 172, 102);
+    background: linear-gradient(
+      140deg,
+      rgba(102, 172, 102, 1) 0%,
+      rgba(100, 123, 100, 1) 100%
+    );
+    cursor: pointer;
+
+    &::first-letter {
+      font-size: 16px;
+    }
+
+    &:hover {
+      background: rgb(102, 172, 102);
+      background: linear-gradient(
+        322deg,
+        rgba(102, 172, 102, 1) 0%,
+        rgba(100, 123, 100, 1) 100%
+      );
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@use "responsive";
+@use "variables";
+
+.section-footer {
+  background-color: variables.$color-footer;
+  width: 100%;
+  .bg-footer {
+    .footer-contain {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 100px 0 100px 0;
+
+      @include responsive.xxxl {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+
+      @include responsive.xl {
+        display: grid;
+        column-count: 1fr auto;
+        grid-template-columns: 2fr 2fr;
+        gap: 50px;
+      }
+
+      @include responsive.md {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .ftr-clm-first {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 20%;
+
+        @include responsive.xl {
+          width: 100%;
+        }
+
+        .footer-social-links {
+          display: flex;
+          gap: 30px;
+
+          img {
+            background: #647b6429;
+            border-radius: 50px;
+            padding: 8px;
+          }
+        }
+
+        .footer-first-section {
+          .footer-logo-with-text {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .footer-logo {
+              display: block;
+            }
+            .title-footer-logo {
+              font-size: 24px;
+              color: variables.$color-primary-green;
+            }
+          }
+
+          .title-footer-logo {
+            font-size: 24px;
+            color: variables.$color-primary-green;
+          }
+
+          .footer-paragraph {
+            padding-top: 20px;
+            color: variables.$color-paragraph;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+        .footer-copy-title {
+          color: variables.$color-paragraph;
+          font-size: 14px;
+          font-weight: 400;
+        }
+        .footer-arr-title {
+          color: variables.$color-paragraph;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .ftr-clm-second {
+        .text-title-footer {
+          h4 {
+            color: variables.$color-primary-green;
+            font-size: 20px;
+            font-weight: 400;
+          }
+        }
+
+        .menus-second-column {
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 24px 0 0 0;
+            list-style: none;
+
+            li {
+              a {
+                text-align: start;
+                text-decoration: none;
+                color: variables.$color-paragraph;
+                font-size: 16px;
+                font-weight: 400;
+                display: block;
+                padding-top: 10px;
+                &:hover {
+                  color: variables.$color-primary-green;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

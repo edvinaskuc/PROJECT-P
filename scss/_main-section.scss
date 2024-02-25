@@ -1,0 +1,77 @@
+@use "responsive";
+@use "variables";
+
+.main-section {
+  .main-section-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+
+    @include responsive.md {
+      padding: 0;
+    }
+
+    .main-section-content-text {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+
+      .main-section-img {
+        position: absolute;
+        position: absolute;
+        top: -35px;
+        left: 156px;
+      }
+
+      .main-section-content-text-title {
+        color: variables.$color-elements;
+        font-size: 42px;
+        max-width: 530px;
+      }
+      .main-section-content-text-paragraph {
+        color: variables.$color-paragraph;
+        font-size: 20px;
+        max-width: 420px;
+        line-height: 30px;
+      }
+
+      .main-section-content-text-button {
+        display: flex;
+        justify-content: space-between;
+        color: variables.$color-white;
+        text-align: start;
+        letter-spacing: 4px;
+        background: linear-gradient(
+          107deg,
+          rgba(100, 123, 100, 1) 0%,
+          rgba(102, 172, 102, 1) 100%
+        );
+        border: none;
+        border-radius: 3px;
+        padding: 30px;
+        cursor: pointer;
+        width: 60%;
+
+        @include responsive.xxl {
+          width: 60%;
+        }
+
+        @include responsive.xl {
+          width: 100%;
+          min-width: 300px;
+        }
+
+        &:hover {
+          background: linear-gradient(
+            189deg,
+            rgba(100, 123, 100, 1) 0%,
+            rgba(102, 172, 102, 1) 100%
+          );
+          box-shadow: 0 0 10px hsl(23, 59%, 91%);
+        }
+      }
+    }
+  }
+}

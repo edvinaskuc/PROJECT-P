@@ -1,0 +1,28 @@
+@use "responsive";
+@use "variables";
+
+.main-cection-cards-itroduction-title {
+  padding-top: 100px;
+
+  .main-second-section-content-text {
+    text-align: center;
+
+    .main-second-section-content-text-title {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: variables.$color-title-orange;
+      font-weight: 400;
+    }
+
+    .main-second-section-content-text-title-bottom {
+      font-size: 41px;
+      text-transform: uppercase;
+      color: variables.$color-primary-green;
+      font-weight: 400;
+
+      @include responsive.sm {
+        font-size: 30px;
+      }
+    }
+  }
+}

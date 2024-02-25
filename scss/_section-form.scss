@@ -1,0 +1,47 @@
+@use "responsive";
+@use "variables";
+
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  .main-section-content-text-button {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    text-align: start;
+    letter-spacing: 4px;
+    background: linear-gradient(
+      107deg,
+      rgba(100, 123, 100, 1) 0%,
+      rgba(102, 172, 102, 1) 100%
+    );
+    border: none;
+    border-radius: 3px;
+    padding: 30px;
+    cursor: pointer;
+    min-width: 300px;
+
+    &:hover {
+      background: linear-gradient(
+        189deg,
+        rgba(100, 123, 100, 1) 0%,
+        rgba(102, 172, 102, 1) 100%
+      );
+      box-shadow: 0 0 10px hsl(23, 59%, 91%);
+    }
+  }
+  .message-title {
+    font-size: 20px;
+    color: variables.$color-primary-green;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .message-input {
+    padding: 15px 100px 100px 15px;
+    border: none;
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+@use "responsive";
+@use "variables";
+
+.main-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-bottom: 150px;
+
+  @include responsive.xxxl {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

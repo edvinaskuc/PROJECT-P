@@ -1,0 +1,54 @@
+@use "responsive";
+@use "variables";
+
+.slider-images-with-description {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+
+  .bg-slider-box {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(237, 239, 237, 1) 100%
+    );
+    border-radius: 8px;
+
+    &:hover {
+      box-shadow: 0 0 35px #f3b4625e;
+    }
+
+    .p-for-slider-contain {
+      padding: 40px;
+    }
+
+    .image-text-slider-side {
+      display: flex;
+      .image-of-slider {
+      }
+
+      .slider-image-text-title-wrapper {
+        padding-top: 15px;
+        .slider-image-text-title {
+          font-weight: 400;
+          font-size: 16px;
+          color: variables.$color-elements;
+        }
+        .slider-image-text-title-bottom {
+          font-weight: 400;
+          font-size: 13px;
+          color: variables.$color-paragraph;
+        }
+      }
+    }
+
+    .slider-paragraph {
+      padding-top: 20px;
+      padding-top: 20px;
+      font-style: italic;
+      font-weight: inherit;
+      font-size: 16px;
+      color: variables.$color-paragraph;
+    }
+  }
+}

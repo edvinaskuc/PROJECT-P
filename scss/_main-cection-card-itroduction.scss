@@ -1,0 +1,108 @@
+@use "responsive";
+@use "variables";
+
+.main-cection-cards-itroduction {
+  display: flex;
+  gap: 50px;
+  padding-top: 50px;
+
+  @include responsive.xxl {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .introduction-card-bg {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 1) 77%,
+      rgba(236, 239, 236, 1) 100%
+    );
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 100px rgba(0, 0, 0, 0.2);
+    }
+    &:nth-child(2) {
+      background: variables.$color-primary-green;
+    }
+
+    .introduction-wrapper {
+      padding: 100px 50px 100px 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+
+      .dots-img {
+        position: absolute;
+        top: 198px;
+        left: -35px;
+        z-index: -1;
+
+        @include responsive.xxl {
+          display: none;
+        }
+      }
+
+      .rectangle-two {
+        position: absolute;
+        top: 198px;
+        top: 234px;
+        right: -1085px;
+        z-index: -1;
+      }
+
+      .imgs-of-introductions {
+        display: block;
+      }
+    }
+
+    .introduction-card-text {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .introduction-titles {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        .introduction-card-text-title {
+          color: variables.$color-elements;
+          font-size: 24px;
+          font-weight: 400;
+          text-transform: uppercase;
+        }
+
+        .introduction-title-second {
+          font-weight: 400;
+          text-transform: uppercase;
+          color: variables.$color-elements;
+        }
+      }
+
+      .introduction-card-text-paragraph {
+        font-weight: 400;
+        color: variables.$color-paragraph;
+      }
+    }
+  }
+
+  .introduction-card-text-title-white {
+    color: variables.$color-white;
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .introduction-title-second-white {
+    font-weight: 400;
+    text-transform: uppercase;
+    color: variables.$color-white;
+  }
+
+  .introduction-card-text-paragraph-white {
+    font-weight: 400;
+    color: variables.$color-white;
+  }
+}

@@ -1,0 +1,85 @@
+@use "responsive";
+@use "variables";
+
+.main-section-wrapper {
+  display: flex;
+  padding-top: 100px;
+
+  @include responsive.xxl {
+    flex-direction: column;
+    gap: 120px;
+  }
+
+  .main-second-section {
+    width: 50%;
+
+    @include responsive.xxl {
+      width: 100%;
+    }
+  }
+
+  .main-third-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 40%;
+
+    @include responsive.xxl {
+      width: 100%;
+    }
+
+    @include responsive.md {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-contain-bordered {
+      &:first-of-type {
+        background-color: variables.$color-white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        .card-contain-inside {
+          .card-contain-inside-image {
+            .image-card-contain {
+              background-color: variables.$color-primary-green;
+              padding: 10px;
+              border-radius: 8px;
+              display: block;
+            }
+          }
+        }
+      }
+
+      &:not(:first-of-type) {
+        .card-contain-inside {
+          .card-contain-inside-image {
+            .image-card-contain {
+              background-color: variables.$color-white;
+              padding: 10px;
+              border-radius: 8px;
+              display: block;
+            }
+          }
+        }
+      }
+
+      .card-contain-inside {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px;
+
+        .card-contain-inside-text-title {
+          font-size: 24px;
+          color: variables.$color-elements;
+        }
+
+        .card-contain-inside-text-paragraph {
+          color: variables.$color-paragraph;
+          font-weight: 400;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}

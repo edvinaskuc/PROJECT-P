@@ -1,0 +1,13 @@
+@use "responsive";
+@use "variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Avenir", sans-serif;
+  margin: 0;
+}

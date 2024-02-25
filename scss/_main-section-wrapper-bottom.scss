@@ -1,0 +1,50 @@
+@use "responsive";
+@use "variables";
+
+.main-section-wrapper-bottom {
+  display: flex;
+  padding-top: 100px;
+
+  .main-second-section {
+    display: flex;
+    gap: 350px;
+    align-items: center;
+    padding-top: 100px;
+
+    @include responsive.xxl {
+      flex-direction: column;
+      gap: 120px;
+      padding-top: 0;
+    }
+
+    .main-second-section-content-text {
+      @include responsive.xxl {
+        align-items: center;
+      }
+
+      @include responsive.md {
+        align-items: baseline;
+        width: 50%;
+      }
+    }
+
+    .main-section-bottom-img {
+      position: relative;
+
+      @include responsive.xxl {
+        display: none;
+      }
+
+      .final-img {
+        position: absolute;
+        top: 43px;
+        left: 78px;
+        z-index: -1;
+      }
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
