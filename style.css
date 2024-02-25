@@ -12,7 +12,6 @@
 body {
   background: linear-gradient(197deg, rgb(247, 231, 225) 0%, rgb(255, 255, 255) 100%);
   overflow-x: hidden;
-  max-width: 100%;
   margin: 0 auto;
   position: relative;
 }
