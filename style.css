@@ -635,6 +635,7 @@ body .elipse-body-img {
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  overflow-x: hidden;
 }
 .slider-images-with-description .bg-slider-box {
   background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(237, 239, 237) 100%);

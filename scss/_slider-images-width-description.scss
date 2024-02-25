@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   gap: 50px;
+  overflow-x: hidden;
 
   .bg-slider-box {
     background: linear-gradient(
