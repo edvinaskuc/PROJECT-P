@@ -172,6 +172,11 @@ body .elipse-body-img {
   right: -1085px;
   z-index: -1;
 }
+@media screen and (max-width: 1200px) {
+  .main-cection-cards-itroduction .introduction-card-bg .introduction-wrapper .rectangle-two {
+    display: none;
+  }
+}
 .main-cection-cards-itroduction .introduction-card-bg .introduction-wrapper .imgs-of-introductions {
   display: block;
 }
