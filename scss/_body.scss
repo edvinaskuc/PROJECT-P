@@ -12,7 +12,8 @@ body {
     rgba(247, 231, 225, 1) 0%,
     rgba(255, 255, 255, 1) 100%
   );
-  min-height: 100vh;
+  overflow-x: hidden;
+  max-width: 100%;
   margin: 0 auto;
   position: relative;
 
