@@ -5,6 +5,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-bottom: 150px;
+  overflow-x: hidden;
 
   @include responsive.xxxl {
     padding-left: 50px;
